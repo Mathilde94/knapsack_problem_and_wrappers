@@ -23,6 +23,13 @@ Sack::Sack(int n,int w,vi val,vi wei){
   }
 }
 
+Sack::~Sack(){
+  free(values);
+  free(weight);
+  free(table);
+}
+
+
 void Sack::display_Sack() const {
   FOR(i,0,N){
     FOR(j,0,W){
